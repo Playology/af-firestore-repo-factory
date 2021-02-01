@@ -3,5 +3,43 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "af-firestore-repo-factory": {
+      "projectType": "library",
+      "root": "projects/af-firestore-repo-factory",
+      "sourceRoot": "projects/af-firestore-repo-factory/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/af-firestore-repo-factory/tsconfig.lib.json",
+            "project": "projects/af-firestore-repo-factory/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/af-firestore-repo-factory/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/af-firestore-repo-factory/src/test.ts",
+            "tsConfig": "projects/af-firestore-repo-factory/tsconfig.spec.json",
+            "karmaConfig": "projects/af-firestore-repo-factory/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/af-firestore-repo-factory/**/*.ts",
+              "projects/af-firestore-repo-factory/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "af-firestore-repo-factory"
 }
