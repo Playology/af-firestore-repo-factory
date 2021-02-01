@@ -1,4 +1,4 @@
-## Angularfire Firest Repository Factory
+## Angularfire Firestore Repository Factory
 
 This Angular library includes a module that provides a factory service for creating generic repositories to access Firestore data using AngularFire.
 
